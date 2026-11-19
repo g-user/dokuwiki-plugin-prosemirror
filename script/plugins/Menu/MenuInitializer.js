@@ -37,6 +37,7 @@ import PageMacroDropdownDispatcher from './MenuItems/PageMacroDropdownDispatcher
 import PageMacroMenuItemDispatcher from './MenuItems/PageMacroMenuItemDispatcher.js';
 import UndoMenuItemDispatcher from './MenuItems/UndoMenuItemDispatcher.js';
 import RedoMenuItemDispatcher from './MenuItems/RedoMenuItemDispatcher.js';
+import SpecialCharsMenuItemDispatcher from './MenuItems/SpecialCharsMenuItemDispatcher.js';
 import SmileyConf from '../../custom/SmileyConf.js';
 
 class MenuInitializer {
@@ -83,6 +84,7 @@ class MenuInitializer {
             FootnoteMenuItemDispatcher,
             RSSMenuItemDispatcher,
             new SmileyDropdownDispatcher(smileyItems),
+            SpecialCharsMenuItemDispatcher,
             new HeadingDropdownDispatcher([
                 new HeadingMenuItemDispatcher(1),
                 new HeadingMenuItemDispatcher(2), // eslint-disable-line no-magic-numbers

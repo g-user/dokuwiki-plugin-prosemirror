@@ -11,6 +11,7 @@ import initializePublicAPI from './initializePublicAPI.js';
 import MenuInitializer from './plugins/Menu/MenuInitializer.js';
 import getNodeViews from './nodeviews/index.js';
 import { disableDefaultTabBehavior } from './plugins/disableDefaultTabBehavior.js';
+import specialCharsPlugin from './plugins/specialchars/specialchars.js';
 
 initializePublicAPI();
 
@@ -23,6 +24,7 @@ window.Prosemirror.enableProsemirror = function enableProsemirror() {
     const plugins = [
         mi.getMenuPlugin(),
         history(),
+        specialCharsPlugin(),
         getKeymapPlugin(schema),
         buildInputRules(schema),
         tableEditing(schema),
